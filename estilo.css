@@ -1,0 +1,35 @@
+/*CSS Stylesheet*/
+
+/*font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;*/
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+header {
+    width: 100%;
+    height: 92px;
+    color: #fff;
+    background-color: #CF2B2B;
+    padding: 8px 0 8px 21px;
+    box-shadow: 3px 3px 10px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 44px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+header h2 {
+    font-size: 18px;
+}
