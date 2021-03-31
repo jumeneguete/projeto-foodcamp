@@ -80,8 +80,10 @@ header h2 {
 ion-icon {
     font-size: 16px;
     color: #32B72F;
+}
+
+.selected-icon {
     display: none;
-    
 }
 
 .options li:first-child{
