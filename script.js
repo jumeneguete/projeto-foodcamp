@@ -1,8 +1,11 @@
-function select () {
-    const selecionado = document.querySelector(".options li");
+function select (comida) {
+
+    //let opcao = comida;
+    
+    let selecionado = document.querySelector(comida);
     selecionado.classList.add("selected");
 
-    const selecionado1 = document.querySelector("ion-icon");
+    let selecionado1 = document.querySelector("ion-icon");
     selecionado1.classList.remove("selected-icon");
 
 }
