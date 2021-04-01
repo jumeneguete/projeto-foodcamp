@@ -1,21 +1,19 @@
-function select (comida) {
+function select (meal) {
 
-    //let opcao = comida;
+    const dontDisplayBorder = document.querySelector(".selected");
+    const dontDisplayIcon = document.querySelector(".selected ion-icon");
+
+    if (dontDisplayBorder !== null){
+        dontDisplayBorder.classList.remove("selected");
+        dontDisplayIcon.classList.add("hide-icon");
+    }
     
-    let selecionado = document.querySelector(comida);
-    selecionado.classList.add("selected");
+    let displayBorder = document.querySelector(meal);
+    displayBorder.classList.add("selected");
 
-    let selecionado1 = document.querySelector("ion-icon");
-    selecionado1.classList.remove("selected-icon");
+    let displayIcon = document.querySelector(".selected ion-icon");
+    displayIcon.classList.remove("hide-icon");
+
 
 }
 
-/*function mostrarLegenda() {
-    var div = document.getElementById("MostraLegenda");
-
-    if (div.style.display == 'none') {
-        div.style.display = 'block';
-    } else {
-        div.style.display = 'none';
-    }
-}*/
