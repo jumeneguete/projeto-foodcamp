@@ -2,8 +2,9 @@ let receivedMeal;
 let receivedDrink;
 let receivedDessert;
 
-function selectMeal (meal) {
-    receivedMeal = meal;
+function selectMeal (mealClass, displayName, price) {
+    receivedMeal = mealClass;
+    mealPrice = price;
 
     const dontDisplayBorder = document.querySelector(".meal-options .selected");
     const dontDisplayIcon = document.querySelector(".meal-options .selected ion-icon");
@@ -13,7 +14,7 @@ function selectMeal (meal) {
         dontDisplayIcon.classList.add("hide-icon");
     }
     
-    let displayBorder = document.querySelector(meal);
+    let displayBorder = document.querySelector(mealClass);
     displayBorder.classList.add("selected");
 
     let displayIcon = document.querySelector(".selected ion-icon");
@@ -22,9 +23,10 @@ function selectMeal (meal) {
     send();
 }
 
-function selectDrink (drink) {
+function selectDrink (drinkClass, displayName, price) {
 
-    receivedDrink = drink;
+    receivedDrink = drinkClass;
+    drinkPrice = price;
 
     const dontDisplayBorder = document.querySelector(".drink-options .selected");
     const dontDisplayIcon = document.querySelector(".drink-options  .selected ion-icon");
@@ -34,7 +36,7 @@ function selectDrink (drink) {
         dontDisplayIcon.classList.add("hide-icon");
     }
     
-    let displayBorder = document.querySelector(drink);
+    let displayBorder = document.querySelector(drinkClass);
     displayBorder.classList.add("selected");
 
     let displayIcon = document.querySelector(".selected ion-icon");
@@ -43,9 +45,10 @@ function selectDrink (drink) {
     send();
 }
 
-function selectDessert (dessert) {
+function selectDessert (dessertClass, displayName, price) {
 
-    receivedDessert = dessert;
+    receivedDessert = dessertClass;
+    dessertPrice = price;
 
     const dontDisplayBorder = document.querySelector(".dessert-options .selected");
     const dontDisplayIcon = document.querySelector(".dessert-options  .selected ion-icon");
@@ -55,7 +58,7 @@ function selectDessert (dessert) {
         dontDisplayIcon.classList.add("hide-icon");
     }
     
-    let displayBorder = document.querySelector(dessert);
+    let displayBorder = document.querySelector(dessertClass);
     displayBorder.classList.add("selected");
 
     let displayIcon = document.querySelector(".selected ion-icon");
