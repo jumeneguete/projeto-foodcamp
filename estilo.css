@@ -136,3 +136,9 @@ footer button {
     border: none;
     border-radius: 50px;
 }
+
+.active-button{
+    background-color: #32B72F;
+    color: #fff;
+    font-weight: bold;
+}
