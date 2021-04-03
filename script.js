@@ -26,7 +26,7 @@ function selectMeal (mealClass, displayName, price) {
     let displayBorder = document.querySelector(mealClass);
     displayBorder.classList.add("selected");
 
-    let displayIcon = document.querySelector(".selected ion-icon");
+    let displayIcon = document.querySelector(".meal-options .selected ion-icon");
     displayIcon.classList.remove("hide-icon");
 
     send();
@@ -49,7 +49,7 @@ function selectDrink (drinkClass, displayName, price) {
     let displayBorder = document.querySelector(drinkClass);
     displayBorder.classList.add("selected");
 
-    let displayIcon = document.querySelector(".selected ion-icon");
+    let displayIcon = document.querySelector(".drink-options .selected ion-icon");
     displayIcon.classList.remove("hide-icon");
 
     send();
@@ -72,7 +72,7 @@ function selectDessert (dessertClass, displayName, price) {
     let displayBorder = document.querySelector(dessertClass);
     displayBorder.classList.add("selected");
 
-    let displayIcon = document.querySelector(".selected ion-icon");
+    let displayIcon = document.querySelector(".dessert-options .selected ion-icon");
     displayIcon.classList.remove("hide-icon");
 
     send();
@@ -83,8 +83,23 @@ function send () {
     if (receivedMeal !== undefined && receivedDrink !== undefined && receivedDessert !== undefined){
         let sendButton = document.querySelector("footer button");
         sendButton.classList.add("active-button");
-        sendButton.innerHTML = "Fechar Pedido";
+        let sendButtonLink = document.querySelector("footer button a");
+        sendButtonLink.innerHTML = "Fechar Pedido";
     }
+}
+
+let clientName;
+let clientAdress;
+
+function messageBonus (){
+    clientName = prompt("Qual é o seu nome?");
+    clientAdress = prompt("Qual é o endereço de entrega?");
+
+    message();
+
+    // && clientName!== undefined && clientAdress !== undefined 
+    // + "\n \nNome: " + clientName + "\n\Endereço: " + clientAdress
+
 }
 
 function message (){
