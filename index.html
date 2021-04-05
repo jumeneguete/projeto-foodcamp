@@ -11,7 +11,7 @@
     <title>FoodCamp</title>
 </head>
 <body>
-    <header>
+    <header id="top">
         <h1>FoodCamp</h1>
         <h2>Sua comida em 6 minutos</h2>
     </header>
@@ -94,9 +94,23 @@
     </div>
 
     <footer>
-        <button onclick="messageBonus()">Selecione os 3 itens <br> 
+        <button onclick="confirmationBonus()">Selecione os 3 itens <br> 
             para fechar o pedido</button>
     </footer>
+
+    <div class="confirmation-screen hide-confirmation">
+        <div class="confirmation-box">
+            <p class="bold">Confirme seu pedido</p>
+            <div class="conf-itens conf-meal"><span>Frango</span> <span>4.90</span></div>
+            <div class="conf-itens conf-drink"><span>Frango</span> <span>4.90</span></div>
+            <div class="conf-itens conf-dessert"><span>Frango</span> <span>4.90</span></div>
+            <div class="conf-itens bold conf-total"><span>TOTAL</span> <span>R&dollar;4.90</span></div>
+        
+
+            <button onclick="messageBonus()">Tudo certo, pode pedir!</button>
+            <div onclick="back()" class="bold">Cancelar</div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>

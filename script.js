@@ -87,16 +87,40 @@ function send () {
         let sendButton = document.querySelector("footer button");
         sendButton.classList.add("active-button");
 
-        let finalPriceSum = parseFloat(mealPrice) + parseFloat(drinkPrice) + parseFloat(dessertPrice);
-        let finalPrice = finalPriceSum.toFixed(2);
-        let finalMessage = "Olá, gostaria de fazer o pedido: \n\ - Prato: " + mealName + "\n\ - Bebida: " + drinkName + "\n\ - Sobremesa: " + dessertName + "\n\Total: R$" + finalPrice;
-        finalMessage = encodeURIComponent(finalMessage);
-        whatsappLink = "'https://wa.me/5521999989398?text="+ finalMessage + "'";
-
         let sendToWhatsapp = document.querySelector("footer button");
-            sendToWhatsapp.innerHTML = "<a id='sending' href=" + whatsappLink + ">Fechar Pedido</a>";
+        sendToWhatsapp.innerHTML = "Fechar Pedido";
+
     }
 
+}
+
+function confirmationBonus() {
+    let confirmation = document.querySelector(".confirmation-screen");
+    confirmation.classList.remove("hide-confirmation");
+
+    let finalPriceSum = parseFloat(mealPrice) + parseFloat(drinkPrice) + parseFloat(dessertPrice);
+    let finalPrice = finalPriceSum.toFixed(2);
+
+
+    let confMeal = document.querySelector(".conf-meal");
+        confMeal.innerHTML ="<span>" + mealName + "</span> <span>" + mealPrice.toFixed(2) + "</span>";
+
+    let confDrink = document.querySelector(".conf-drink");
+        confDrink.innerHTML ="<span>" + drinkName + "</span> <span>" + drinkPrice.toFixed(2) + "</span>";
+    
+    let confDessert = document.querySelector(".conf-dessert");
+        confDessert.innerHTML ="<span>" + dessertName + "</span> <span>" + dessertPrice.toFixed(2) + "</span>";
+
+    let confTotal = document.querySelector(".conf-total");
+        confTotal.innerHTML ="<span>TOTAL</span> <span>R&dollar;" + finalPrice + "</span>";
+
+
+    let finalMessage = "Olá, gostaria de fazer o pedido: \n\ - Prato: " + mealName + "\n\ - Bebida: " + drinkName + "\n\ - Sobremesa: " + dessertName + "\n\Total: R$" + finalPrice;
+    finalMessage = encodeURIComponent(finalMessage);
+    whatsappLink = "'https://wa.me/5521999989398?text="+ finalMessage + "'";
+
+    let sendToWhatsapp = document.querySelector(".confirmation-box button");
+        sendToWhatsapp.innerHTML = "<a id='sending' href=" + whatsappLink + ">Fechar Pedido</a>";
 }
 
 function messageBonus (){
@@ -108,4 +132,9 @@ function messageBonus (){
     let finalMessage = "Olá, gostaria de fazer o pedido: \n\ - Prato: " + mealName + "\n\ - Bebida: " + drinkName + "\n\ - Sobremesa: " + dessertName + "\n\Total: R$" + finalPrice + "\n \nNome: " + clientName + "\n\Endereço: " + clientAdress;
         finalMessage = encodeURIComponent(finalMessage);
     document.getElementById("sending").href = "https://wa.me/5521999989398?text="+ finalMessage;
+}
+
+function back (){
+    let confirmation = document.querySelector(".confirmation-screen");
+    confirmation.classList.add("hide-confirmation");
 }
