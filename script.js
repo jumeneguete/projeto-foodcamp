@@ -94,11 +94,12 @@ function send () {
         whatsappLink = "'https://wa.me/5521999989398?text="+ finalMessage + "'";
 
         let sendToWhatsapp = document.querySelector("footer button");
-            sendToWhatsapp.innerHTML = "<a href=" + whatsappLink + ">Fechar Pedido</a>";
+            sendToWhatsapp.innerHTML = "<a id='sending' href=" + whatsappLink + ">Fechar Pedido</a>";
     }
+
 }
 
-/*function messageBonus (){
+function messageBonus (){
     clientName = prompt("Qual é o seu nome?");
     clientAdress = prompt("Qual é o endereço de entrega?");
 
@@ -106,28 +107,5 @@ function send () {
     let finalPrice = finalPriceSum.toFixed(2);
     let finalMessage = "Olá, gostaria de fazer o pedido: \n\ - Prato: " + mealName + "\n\ - Bebida: " + drinkName + "\n\ - Sobremesa: " + dessertName + "\n\Total: R$" + finalPrice + "\n \nNome: " + clientName + "\n\Endereço: " + clientAdress;
         finalMessage = encodeURIComponent(finalMessage);
-        whatsappLink = "'https://wa.me/5521999989398?text="+ finalMessage + "'";
-
-    let sendToWhatsapp = document.querySelector("footer button");
-        sendToWhatsapp.innerHTML = "<a href=" + whatsappLink + ">Fechar Pedido</a>";
-        
-
-    // && clientName!== undefined && clientAdress !== undefined 
-    // + "\n \nNome: " + clientName + "\n\Endereço: " + clientAdress
-
-}*/
-
-/* function message (){
-
-    if (receivedMeal !== undefined && receivedDrink !== undefined && receivedDessert !== undefined && mealPrice !== undefined && drinkPrice !== undefined && dessertPrice !== undefined){
-        let finalPriceSum = parseFloat(mealPrice) + parseFloat(drinkPrice) + parseFloat(dessertPrice);
-        let finalPrice = finalPriceSum.toFixed(2);
-        let finalMessage = "Olá, gostaria de fazer o pedido: \n\ - Prato: " + mealName + "\n\ - Bebida: " + drinkName + "\n\ - Sobremesa: " + dessertName + "\n\Total: R$" + finalPrice;
-        finalMessage = encodeURIComponent(finalMessage);
-        whatsappLink = "'https://wa.me/5521999989398?text="+ finalMessage + "'";
-
-        let sendToWhatsapp = document.querySelector("footer button");
-            sendToWhatsapp.innerHTML = "<a href=" + whatsappLink + ">Fechar Pedido</a>";
-    }
+    document.getElementById("sending").href = "https://wa.me/5521999989398?text="+ finalMessage;
 }
-*/
