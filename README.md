@@ -8,6 +8,7 @@ Easy Peasy!
 <p align="center"><img width="300px" src="/assets/foodcampjs.gif" /></p>
 
 Project developed using pure vanilla javasript!
+You can try this out now: https://projeto-foodcamp.vercel.app/
 
 ### 🔹🔹About
 
