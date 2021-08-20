@@ -28,9 +28,9 @@ This is a mobile web application where users can order a food combo and send the
 There is no use of API in this project, that is why you will find all the items hardcoded in the index.html file. <br><br>
 It was very cool producing this application while learning javascript. I am very amazed with the result.<br> <br>
 
-This project was later on implemented using ReactJS as my first application using this framework, you can check this repository out here: https://github.com/jumeneguete/projeto-foodcamp
+This project was later on implemented using ReactJS as my first application using this framework, you can check this repository out here: https://github.com/jumeneguete/foodcamp-react
 
 ### 🔹🔹How to run
 
 1. Clone this repository
-2. Open index.htlm on your favorite browser.
+2. Open index.html on your favorite browser.
