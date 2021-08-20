@@ -131,7 +131,7 @@ function messageBonus (){
     let finalPrice = finalPriceSum.toFixed(2);
     let finalMessage = "Olá, gostaria de fazer o pedido: \n\ - Prato: " + mealName + "\n\ - Bebida: " + drinkName + "\n\ - Sobremesa: " + dessertName + "\n\Total: R$" + finalPrice + "\n \nNome: " + clientName + "\n\Endereço: " + clientAdress;
         finalMessage = encodeURIComponent(finalMessage);
-    document.getElementById("sending").href = "https://wa.me/5521999989398?text="+ finalMessage;
+    document.getElementById("sending").href = "https://wa.me/5521999999999?text="+ finalMessage;
 }
 
 function back (){
