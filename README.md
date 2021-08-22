@@ -18,7 +18,7 @@ This is a mobile web application where users can order a food combo and send the
 - Home page where users can choose meals, drinks and desserts;
 - Confirmation order page;
 - Alerts to insert name and delivery address;
-- WhatsApp page review with an automatic message describing the selectes items and the total to be paid;<br>
+- WhatsApp page review with an automatic message describing the selected items and the total to be paid;<br>
   _Business rule:_ Users have to choose one item per category. 
 
 ### 🔹🔹Technologies
